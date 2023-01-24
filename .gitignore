@@ -1,2 +1,11 @@
+<<<<<<< HEAD
 .vs/
 /.vs/slnx.sqlite
+=======
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+>>>>>>> 5d539a92d3b1a65810d3a0e4ac8b1eb2380d773b
+/.gitignore
