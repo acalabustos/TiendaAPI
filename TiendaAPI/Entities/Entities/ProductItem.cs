@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    internal class ProductItem
+    public class ProductItem
     {
+        public ProductItem()
+        {
+            IsActive = true;
+            IsPublic = true;
+        }
+        public int IdProduct { get; set; }
+        public int IdSuplier { get; set; }
+        public int IdBrand { get; set; }
+        public int Price { get; set; }
+        public string Name { get; set; }
+        public decimal Cost { get; set; }
+        public string TypeProduct { get; set; }
+        public bool IsActive { get; private set; }
+        public bool IsPublic { get; private set; }
     }
 }
