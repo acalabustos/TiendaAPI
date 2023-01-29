@@ -13,7 +13,7 @@ namespace Entities.Entities
             IsActive = true;
             IsPublic = true;
         }
-        public int IdProduct { get; set; }
+        public int Id { get; set; }
         public int IdSuplier { get; set; }
         public int IdBrand { get; set; }
         public int Price { get; set; }

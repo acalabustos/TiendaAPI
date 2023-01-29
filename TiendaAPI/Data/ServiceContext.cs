@@ -14,28 +14,26 @@ namespace Data
     {
         public ServiceContext(DbContextOptions<ServiceContext> options) : base(options) { }
         public DbSet<ProductItem> Products { get; set; }
-        public DbSet<OrderItem> Orders { get; set; }
-        public DbSet<BrandItem> Brand { get; set; }
+     //   public DbSet<OrderItem> Orders { get; set; }
+     //   public DbSet<BrandItem> Brand { get; set; }
         public DbSet<UserItem> Users { get; set; }
-        public DbSet<LineOrder> LineOrder { get; set; }
+      //  public DbSet<LineOrder> LineOrder { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<ProductItem>()
-            .ToTable("Products");
+           builder.Entity<ProductItem>()
+           .ToTable("Products");
 
-            builder.Entity<OrderItem>()
-            .ToTable("Orders")
-            .HasOne<ProductItem>()
-            .WithMany()
-            .HasForeignKey(o => o.IdProduct);
+         //   builder.Entity<OrderItem>()
+          //  .ToTable("Orders")
+         //   .HasOne<ProductItem>()
+          //  .WithMany()
+         //   .HasForeignKey(o => o.IdProduct);
 
-            builder.Entity<BrandItem>()
-            .ToTable("Brand");
+         //   builder.Entity<BrandItem>()
+         //   .ToTable("Brand");
 
             builder.Entity<UserItem>()
-            .ToTable("Users");
-
-           
+            .ToTable("Users");  
            
         }
     }

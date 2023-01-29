@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 namespace Entities.Entities
 {
     public class UserItem
-    {
-        public UserItem() { }
-        public int IdUser { get; set; }
+    { 
+        public UserItem() {
+            IsActive = true;
+        }
+        public int Id { get; set; }
         public string Email { get; set; }
         private string EncryptedPassword { get; set; }
+
+        public bool IsActive { get; private set; }
 
 
     }

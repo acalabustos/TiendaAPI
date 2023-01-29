@@ -8,7 +8,7 @@ namespace Entities.Entities
 {
     public class LineOrder
     {
-        public int IdOrder { get; set; }
+        public int Id { get; set; }
         public int IdProduct { get; set; }
         public int IdUser { get; set; }
         public decimal Lot { get; set; }

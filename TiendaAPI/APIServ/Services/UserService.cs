@@ -14,7 +14,7 @@ namespace APIServ.Services
         public int InsertUser(UserItem userItem)
         {
             _userLogic.InsertUserItem(userItem);
-            return userItem.IdUser;
+            return userItem.Id;
         }
     }
 }

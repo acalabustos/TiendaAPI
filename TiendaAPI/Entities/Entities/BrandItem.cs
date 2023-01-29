@@ -8,7 +8,7 @@ namespace Entities.Entities
 {
     public class BrandItem
     {
-        public int IdBrand { get; set; }
+        public int Id { get; set; }
 
         public string Contact { get; set; }
     }
