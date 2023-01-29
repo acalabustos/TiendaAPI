@@ -2,11 +2,8 @@
 
 namespace APIServ.IServices
 {
-    public class IUserService
+    public interface IUserService
     {
-        internal int InsertUser(UserItem userItem)
-        {
-            throw new NotImplementedException();
-        }
+        int InsertUser(UserItem userItem);
     }
 }

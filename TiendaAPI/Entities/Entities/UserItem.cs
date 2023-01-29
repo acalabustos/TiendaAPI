@@ -8,8 +8,10 @@ namespace Entities.Entities
 {
     public class UserItem
     { 
-        public UserItem() {
+        public UserItem(string email) {
             IsActive = true;
+            Email = email;
+            
         }
         public int Id { get; set; }
         public string Email { get; set; }

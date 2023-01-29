@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,12 @@ namespace Entities.Entities
 {
     public class ProductItem
     {
-        public ProductItem()
+        public ProductItem(String name, String typeProduct)
         {
             IsActive = true;
             IsPublic = true;
+            Name = name;
+            TypeProduct = typeProduct;
         }
         public int Id { get; set; }
         public int IdSuplier { get; set; }

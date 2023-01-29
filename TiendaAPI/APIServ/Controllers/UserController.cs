@@ -1,5 +1,4 @@
 ﻿using APIServ.IServices;
-using APIService.Controllers;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +8,9 @@ namespace APIServ.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly ILogger<ProductController> _logger;
+        private readonly ILogger<UserController> _logger;
         private readonly IUserService _userService;
-        public UserController(ILogger<ProductController> logger, IUserService userService)
+        public UserController(ILogger<UserController> logger, IUserService userService)
         {
             _logger = logger;
             _userService = userService;
