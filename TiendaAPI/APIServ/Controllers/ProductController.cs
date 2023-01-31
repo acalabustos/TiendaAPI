@@ -1,11 +1,12 @@
 ﻿using APIService.IServices;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace APIService.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller] /[action]")]
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -21,6 +22,12 @@ namespace APIService.Controllers
         {
             //     _userService.ValidateCredentials(userItem);
             return _productService.InsertProduct(productItem);
+        }
+        [HttpGet(Name = "GetAllProducts")]
+        public List<ProductItem> GetAll()
+        {
+            //     _userService.ValidateCredentials(userItem);
+            return _productService.GetAllProducts();
         }
     }
 }

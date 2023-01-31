@@ -18,5 +18,9 @@ namespace APIServ.Services
             _productLogic.InsertProductItem(productItem);
             return productItem.Id;
         }
+        public List<ProductItem> GetAllProducts()
+        {
+            return _productLogic.GetAllProducts();
+        }
     }
 }
