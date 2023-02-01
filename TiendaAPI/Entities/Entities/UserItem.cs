@@ -17,7 +17,7 @@ namespace Entities.Entities
         public string Email { get; set; }
         private string EncryptedPassword { get; set; }
 
-        public bool IsActive { get; private set; }
+        public bool IsActive { get; set; }
 
 
     }

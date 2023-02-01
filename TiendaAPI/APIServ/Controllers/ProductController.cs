@@ -1,9 +1,10 @@
-﻿using APIService.IServices;
+﻿using APIServ.IServices;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Authentication;
 
-namespace APIService.Controllers
+namespace APIServ.Controllers
 {
     [ApiController]
     [Route("[controller] /[action]")]
@@ -28,6 +29,18 @@ namespace APIService.Controllers
         {
             //     _userService.ValidateCredentials(userItem);
             return _productService.GetAllProducts();
+        }
+        [HttpPatch(Name = "ModifyProduct")]
+        public void Patch([FromBody] int id)
+        {
+            _productService.UpdatePrduct(id);
+
+        }
+        [HttpDelete(Name = "DeleteProduct")]
+        public void Delete([FromQuery] int id)
+        {
+            _productService.DeleteProduct(id);
+
         }
     }
 }

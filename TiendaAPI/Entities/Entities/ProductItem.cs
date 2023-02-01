@@ -23,7 +23,7 @@ namespace Entities.Entities
         public string Name { get; set; }
         public decimal Cost { get; set; }
         public string TypeProduct { get; set; }
-        public bool IsActive { get; private set; }
-        public bool IsPublic { get; private set; }
+        public bool IsActive { get;  set; }
+        public bool IsPublic { get; set; }
     }
 }

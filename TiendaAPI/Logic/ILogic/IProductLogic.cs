@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 namespace Logic.ILogic
 {
     public interface IProductLogic
-    {
+    { 
         List<ProductItem> GetAllProducts();
         int InsertProductItem(ProductItem productItem);
+        void UpdateProductItem(int id);
+        void DeleteProductItem(int id);
     }
 }

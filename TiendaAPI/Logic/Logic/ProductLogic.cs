@@ -1,12 +1,12 @@
-﻿using Data;
-using Entities.Entities;
-using Logic.ILogic;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data;
+using Entities.Entities;
+using Logic.ILogic;
 
 namespace Logic.Logic
 {
@@ -17,12 +17,28 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<ProductItem>().ToList();
         }
-
-        public int InsertProductItem(ProductItem productItem)
+         public int InsertProductItem(ProductItem productItem)
         {
             _serviceContext.Products.Add(productItem);
-            _serviceContext.SaveChanges();
+             _serviceContext.SaveChanges();
             return productItem.Id;
+        }
+
+        public void UpdateProductItem(int id)
+        {
+            _serviceContext.SaveChanges();
+            //NO SABEMOS SI TENEMOS QUE PONER UN RETURN
+        }
+
+        public void DeleteProductItem(int id)
+        {
+            var productToDelete = _serviceContext.Set<ProductItem>()
+                 .Where(u => u.Id == id).First();
+
+            productToDelete.IsActive = false;
+
+            _serviceContext.SaveChanges();
+
         }
     }
 }

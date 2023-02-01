@@ -1,9 +1,6 @@
-﻿
-using APIService.IServices;
+﻿using APIServ.IServices;
 using Entities.Entities;
 using Logic.ILogic;
-using Logic.Logic;
-
 namespace APIServ.Services
 {
     public class ProductService : IProductService
@@ -21,6 +18,16 @@ namespace APIServ.Services
         public List<ProductItem> GetAllProducts()
         {
             return _productLogic.GetAllProducts();
+        }
+       
+        public void DeleteProduct(int id)
+        {
+            _productLogic.DeleteProductItem(id);
+        }
+
+        public void UpdatePrduct(int id)
+        {
+            _productLogic.UpdateProductItem(id);
         }
     }
 }
