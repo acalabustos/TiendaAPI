@@ -1,6 +1,7 @@
 ﻿using APIServ.IServices;
 using Entities.Entities;
 using Logic.ILogic;
+using Logic.Logic;
 
 namespace APIServ.Services
 {
@@ -16,5 +17,24 @@ namespace APIServ.Services
             _userLogic.InsertUserItem(userItem);
             return userItem.Id;
         }
+        public List<UserItem> GetAllUser()
+        {
+            return _userLogic.GetAllUser();
+
+        }
+        public void DeleteUser(int id) 
+        {
+            _userLogic.DeleteUserItem(id);
+        }
+        public void UpdateUser(int id)
+        {
+            _userLogic.UpdateUserItem(id);
+        }    
+
     }
 }
+
+
+
+
+

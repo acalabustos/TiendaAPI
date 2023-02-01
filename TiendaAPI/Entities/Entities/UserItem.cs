@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace Entities.Entities
 {
     public class UserItem
-    { 
-        public UserItem(string email) {
+    {
+        public UserItem(string email)
+        {
             IsActive = true;
             Email = email;
             
