@@ -1,4 +1,4 @@
-﻿using APIService.IServices;
+﻿using APIServ.IServices;
 using Entities.Entities;
 using Logic.ILogic;
 
@@ -16,5 +16,23 @@ namespace APIServ.Services
             _brandLogic.InsertBrandItem(brandItem);
             return brandItem.Id;
         }
+        public List<BrandItem> GetAllBrand()
+            {
+                return _brandLogic.GetAllBrand();
+
+            }
+        public void DeleteBrand(int id)
+                {
+                    _brandLogic.DeleteBrandItem(id);
+                }
+
+        public void UpdateBrand(int id)
+        {
+            _brandLogic.UpdateBrandItem(id);
+        }
     }
 }
+
+   
+    
+  

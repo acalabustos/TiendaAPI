@@ -9,6 +9,9 @@ namespace Logic.ILogic
 {
     public interface IBrandLogic
     {
-        void InsertBrandItem(BrandItem brandItem);
+        int InsertBrandItem(BrandItem brandItem);
+        List<BrandItem> GetAllBrand();
+        void UpdateBrandItem(int id);
+        void DeleteBrandItem(int id);
     }
 }

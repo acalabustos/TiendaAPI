@@ -8,8 +8,13 @@ namespace Entities.Entities
 {
     public class BrandItem
     {
+        public BrandItem()
+        { 
+            IsActive = true;
+        }
+           
         public int Id { get; set; }
-
+        public bool IsActive { get; set; }
         public string Contact { get; set; }
     }
 }

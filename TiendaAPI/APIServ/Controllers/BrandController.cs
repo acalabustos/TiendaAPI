@@ -1,11 +1,11 @@
-﻿using APIService.IServices;
+﻿using APIServ.IServices;
 using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APIService.Controllers
+namespace APIServ.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller] /action ")]
     public class BrandController : ControllerBase
     {
         private readonly ILogger<BrandController> _logger;
@@ -22,5 +22,28 @@ namespace APIService.Controllers
             //     _userService.ValidateCredentials(userItem);
             return _brandService.InsertBrand(brandItem);
         }
+        [HttpGet(Name = "GetAllBrand")]
+        public List<BrandItem> GetAll()
+        {
+            //     _userService.ValidateCredentials(userItem);
+            return _brandService.GetAllBrand();
+        }
+        [HttpPatch(Name = "ModifyBrand")]
+        public void Patch([FromBody] int id)
+        {
+            _brandService.UpdateBrand(id);
+
+        }
+        [HttpDelete(Name = "DeleteBrand")]
+        public void Delete([FromQuery] int id)
+        {
+            _brandService.DeleteBrand(id);
+
+        }
     }
 }
+     
+        
+
+
+    

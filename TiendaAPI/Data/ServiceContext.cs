@@ -17,7 +17,7 @@ namespace Data
      //   public DbSet<OrderItem> Orders { get; set; }
         public DbSet<BrandItem> Brand { get; set; }
         public DbSet<UserItem> Users { get; set; }
-      //  public DbSet<LineOrder> LineOrder { get; set; }
+   
         protected override void OnModelCreating(ModelBuilder builder)
         {
            builder.Entity<ProductItem>()
