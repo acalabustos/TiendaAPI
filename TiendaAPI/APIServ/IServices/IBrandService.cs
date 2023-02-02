@@ -7,8 +7,8 @@ namespace APIServ.IServices
     {
         List<BrandItem> GetAllBrand();
         int InsertBrand(BrandItem brandItem);
-        int UpdateBrand(int id);
-        int DeleteBrand(int id);
+        void UpdateBrand(int id);
+        void DeleteBrand(int id);
 
     }
 }
