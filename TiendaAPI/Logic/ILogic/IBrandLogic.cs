@@ -11,7 +11,7 @@ namespace Logic.ILogic
     {
         int InsertBrandItem(BrandItem brandItem);
         List<BrandItem> GetAllBrand();
-        void UpdateBrandItem(int id);
+        void UpdateBrandItem(BrandItem brandItem);
         void DeleteBrandItem(int id);
     }
 }

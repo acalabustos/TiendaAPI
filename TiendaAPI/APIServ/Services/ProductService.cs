@@ -25,9 +25,9 @@ namespace APIServ.Services
             _productLogic.DeleteProductItem(id);
         }
 
-        public void UpdatePrduct(int id)
+        public void UpdateProduct(ProductItem productItem)
         {
-            _productLogic.UpdateProductItem(id);
+            _productLogic.UpdateProductItem (productItem);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace APIServ.IServices
     {
         List<UserItem> GetAllUser();
         int InsertUser(UserItem userItem);
-        void UpdateUser(int id);
         void DeleteUser(int id);
+        void UpdateUser(UserItem userItem);
     }
 }

@@ -23,18 +23,18 @@ namespace Logic.Logic
             {
                 return _serviceContext.Set<BrandItem>().ToList();
             }
-        public void UpdateBrandItem(int id)
+        public void UpdateBrandItem(BrandItem brandItem)
         {
             _serviceContext.SaveChanges();
         }
         public void DeleteBrandItem(int id)
         {
-        var brandToDelete = _serviceContext.Set<BrandItem>()
+           var brandToDelete = _serviceContext.Set<BrandItem>()
              .Where(u => u.Id == id).First();
 
-        brandToDelete.IsActive = false;
+            brandToDelete.IsActive = false;
 
-        _serviceContext.SaveChanges();
+            _serviceContext.SaveChanges();
 
          } 
 

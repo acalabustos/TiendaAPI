@@ -30,17 +30,17 @@ namespace APIServ.Controllers
             //     _userService.ValidateCredentials(userItem);
             return _productService.GetAllProducts();
         }
-        [HttpPatch(Name = "ModifyProduct")]
-        public void Patch([FromBody] int id)
-        {
-            _productService.UpdatePrduct(id);
-
-        }
+        
         [HttpDelete(Name = "DeleteProduct")]
         public void Delete([FromQuery] int id)
         {
             _productService.DeleteProduct(id);
 
+        }
+        [HttpPatch(Name = "ModifyProduct")]
+        public void Patch([FromBody] ProductItem productItem)
+        {
+            _productService.UpdateProduct(productItem);
         }
     }
 }

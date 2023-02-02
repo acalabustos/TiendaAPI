@@ -9,12 +9,11 @@ namespace Entities.Entities
 {
     public class ProductItem
     {
-        public ProductItem(String name, String typeProduct)
+        public ProductItem()
         {
             IsActive = true;
             IsPublic = true;
-            Name = name;
-            TypeProduct = typeProduct;
+           
         }
         public int Id { get; set; }
         public int IdSuplier { get; set; }

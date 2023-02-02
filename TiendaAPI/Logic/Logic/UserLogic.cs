@@ -26,7 +26,7 @@ namespace Logic.Logic
         }
        
 
-        public void UpdateUserItem(int id)
+        public void UpdateUserItem(UserItem userItem)
         {
             _serviceContext.SaveChanges();
             //NO SABEMOS SI TENEMOS QUE PONER UN RETURN

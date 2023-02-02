@@ -24,10 +24,11 @@ namespace Logic.Logic
             return productItem.Id;
         }
 
-        public void UpdateProductItem(int id)
+        public void UpdateProductItem(ProductItem productItem)
         {
+            _serviceContext.Products.Update(productItem);
             _serviceContext.SaveChanges();
-            //NO SABEMOS SI TENEMOS QUE PONER UN RETURN
+            
         }
 
         public void DeleteProductItem(int id)

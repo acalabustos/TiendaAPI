@@ -26,9 +26,10 @@ namespace APIServ.Services
                     _brandLogic.DeleteBrandItem(id);
                 }
 
-        public void UpdateBrand(int id)
+        public void UpdateBrand(BrandItem brandItem)
         {
-            _brandLogic.UpdateBrandItem(id);
+            _brandLogic.UpdateBrandItem(brandItem);
+
         }
     }
 }

@@ -7,7 +7,6 @@ namespace APIServ.IServices
         List<ProductItem> GetAllProducts();
         int InsertProduct(ProductItem productItem);
         void DeleteProduct(int id);
-        void UpdatePrduct(int id);
-       
+        void UpdateProduct(ProductItem productItem);
     }
 }

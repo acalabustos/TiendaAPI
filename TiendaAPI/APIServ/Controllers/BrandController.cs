@@ -29,9 +29,9 @@ namespace APIServ.Controllers
             return _brandService.GetAllBrand();
         }
         [HttpPatch(Name = "ModifyBrand")]
-        public void Patch([FromBody] int id)
+        public void Patch([FromBody] BrandItem brandItem)
         {
-            _brandService.UpdateBrand(id);
+            _brandService.UpdateBrand(brandItem);
 
         }
         [HttpDelete(Name = "DeleteBrand")]

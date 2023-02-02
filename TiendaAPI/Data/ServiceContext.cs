@@ -14,7 +14,7 @@ namespace Data
     {
         public ServiceContext(DbContextOptions<ServiceContext> options) : base(options) { }
         public DbSet<ProductItem> Products { get; set; }
-     //   public DbSet<OrderItem> Orders { get; set; }
+        public DbSet<OrderItem> Orders { get; set; }
         public DbSet<BrandItem> Brand { get; set; }
         public DbSet<UserItem> Users { get; set; }
    
@@ -23,11 +23,11 @@ namespace Data
            builder.Entity<ProductItem>()
            .ToTable("Products");
 
-         //   builder.Entity<OrderItem>()
-          //  .ToTable("Orders")
-         //   .HasOne<ProductItem>()
-          //  .WithMany()
-         //   .HasForeignKey(o => o.IdProduct);
+          builder.Entity<OrderItem>()
+           .ToTable("Orders")
+          .HasOne<ProductItem>()
+           .WithMany()
+           .HasForeignKey(o => o.ProductId);
 
             builder.Entity<BrandItem>()
                 .ToTable("Brand");

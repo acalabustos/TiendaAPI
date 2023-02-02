@@ -26,9 +26,9 @@ namespace APIServ.Services
         {
             _userLogic.DeleteUserItem(id);
         }
-        public void UpdateUser(int id)
+        public void UpdateUser(UserItem userItem)
         {
-            _userLogic.UpdateUserItem(id);
+            _userLogic.UpdateUserItem(userItem);
         }    
 
     }
