@@ -1,4 +1,5 @@
 ﻿using APIServ.IServices;
+using Data;
 using Entities.Entities;
 using Logic.ILogic;
 
@@ -18,7 +19,7 @@ namespace APIServ.Services
             }
             public List<OrderItem> GetAllOrder()
             {
-                return _orderLogic.GetAllOrder();
+                return _orderLogic.GetAllOrders();
             }
 
             public void DeleteOrder(int id)
@@ -30,6 +31,7 @@ namespace APIServ.Services
             {
                 _orderLogic.UpdateOrderItem(orderItem);
             }
-        
+           
+
     }
 }

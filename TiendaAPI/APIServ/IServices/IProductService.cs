@@ -1,5 +1,6 @@
 ﻿using Entities.Entities;
 
+
 namespace APIServ.IServices
 {
     public interface IProductService
@@ -8,5 +9,6 @@ namespace APIServ.IServices
         int InsertProduct(ProductItem productItem);
         void DeleteProduct(int id);
         void UpdateProduct(ProductItem productItem);
+        
     }
 }

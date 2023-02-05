@@ -42,5 +42,7 @@ namespace APIServ.Controllers
         {
             _productService.UpdateProduct(productItem);
         }
+      
+    
     }
 }

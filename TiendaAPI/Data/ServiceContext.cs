@@ -20,14 +20,15 @@ namespace Data
    
         protected override void OnModelCreating(ModelBuilder builder)
         {
-           builder.Entity<ProductItem>()
-           .ToTable("Products");
+            builder.Entity<ProductItem>()
+            .ToTable("Products");
+            
 
-          builder.Entity<OrderItem>()
-           .ToTable("Orders")
-          .HasOne<ProductItem>()
-           .WithMany()
-           .HasForeignKey(o => o.ProductId);
+            builder.Entity<OrderItem>()
+             .ToTable("Orders")
+            .HasOne<ProductItem>()
+             .WithMany()
+            .HasForeignKey(o => o.ProductId);
 
             builder.Entity<BrandItem>()
                 .ToTable("Brand");

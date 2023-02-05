@@ -9,7 +9,7 @@ namespace Logic.ILogic
 {
     public interface IOrderLogic
     {
-        List<OrderItem> GetAllOrder();
+        List<OrderItem> GetAllOrders();
         int InsertOrderItem(OrderItem orderItem);
         void UpdateOrderItem(OrderItem orderItem);
         void DeleteOrderItem(int id);

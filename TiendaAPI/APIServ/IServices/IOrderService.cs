@@ -2,11 +2,11 @@
 
 namespace APIServ.IServices
 {
-    public class IOrderService
+    public interface IOrderService
     {
         List<OrderItem> GetAllOrder();
-        int InsertOrderItem(OrderItem orderItem);
-        void UpdateOrderItem(OrderItem orderItem);
-        void DeleteOrderItem(int id);
+        int InsertOrder(OrderItem orderItem);
+        void UpdateOrder(OrderItem orderItem);
+        void DeleteOrder(int id);
     }
 }

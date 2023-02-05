@@ -8,6 +8,7 @@ using Data;
 using Entities.Entities;
 using Logic.ILogic;
 
+
 namespace Logic.Logic
 {
     public class ProductLogic : BaseContextLogic, IProductLogic
@@ -17,10 +18,10 @@ namespace Logic.Logic
         {
             return _serviceContext.Set<ProductItem>().ToList();
         }
-         public int InsertProductItem(ProductItem productItem)
+        public int InsertProductItem(ProductItem productItem)
         {
             _serviceContext.Products.Add(productItem);
-             _serviceContext.SaveChanges();
+            _serviceContext.SaveChanges();
             return productItem.Id;
         }
 
@@ -28,7 +29,7 @@ namespace Logic.Logic
         {
             _serviceContext.Products.Update(productItem);
             _serviceContext.SaveChanges();
-            
+
         }
 
         public void DeleteProductItem(int id)
@@ -41,5 +42,6 @@ namespace Logic.Logic
             _serviceContext.SaveChanges();
 
         }
+     
     }
 }
